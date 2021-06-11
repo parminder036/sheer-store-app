@@ -1,0 +1,11 @@
+.thumbnail { 
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  background-size: cover;
+}
+
+table {
+  border: 1px solid grey;
+  max-width:100%;
+}

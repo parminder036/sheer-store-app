@@ -1,0 +1,15 @@
+<div class="row mt-3">
+  <div class="col-sm-3">
+    <app-product-filter [category]="category"></app-product-filter>
+  </div>
+  <div class="col">
+    <div class="row justify-content-around" *ngIf ="cart$ | async as cart">
+      <ng-container class="col" *ngFor = "let prod of filteredProducts; let i = index ">
+        <div class="col-sm-4">
+          <app-product-card [product]= "prod" [shopping-Cart] = "cart"></app-product-card>
+        </div>
+        <div *ngIf = " (i+1) % 2 === 0 " class="w-100"></div>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container mt-3">
+<p>
+  <a routerLink="/admin/products/new" class="btn btn-success">New Product</a>
+</p>
+<table class="table table-striped table-hover">
+  <thead>
+      <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Price</th>
+          <th scope="col">Category</th>
+          <th></th>
+          <th></th>
+          
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let prod of products">
+          <td>{{ prod.title }}</td>
+          <td>{{ prod.price}}</td>
+          <td>{{ prod.category}}</td>
+          <td><a class="btn btn-warning" [routerLink]="['/admin/products/', prod.key]">Edit</a></td>
+          <td><a class="btn btn-danger" (click) = onDelete(prod.key)>Delete</a></td>
+          
+      </tr>
+  </tbody>
+</table>
+</div>

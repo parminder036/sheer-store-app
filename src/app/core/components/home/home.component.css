@@ -1,0 +1,31 @@
+.container-fluid{
+  background-color: lightgreen;
+  min-width:100vw;
+  min-height:100vh;
+  }
+
+
+.img-container{
+  min-width:100%;
+  max-height:50vh;
+}
+.main-image{
+  object-fit: cover;
+}
+
+h1{
+  font-size:5rem;
+}
+
+h3{
+  font-size:2rem;
+}
+
+h5 {
+  font-size:1.5rem;
+}
+
+.card{
+  border: 1px solid grey;
+  
+}

@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -14,10 +13,18 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "skipLibCheck": true,
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "baseUrl": "./src",
+    "paths":{
+      "shared/*": ["app/shared/*"],
+      "admin/*": ["app/admin/*"],
+      "shopping/*": ["app/shopping/*"],
+      "core/*": ["app/core/*"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
